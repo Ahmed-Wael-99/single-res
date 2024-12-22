@@ -1,0 +1,18 @@
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+class TaxCalculator:
+    def calculate_tax(self, employee):
+        return employee.salary * 0.1
+
+class DatabaseManager:
+    def save_employee(self, employee):
+        # Simulating database save
+        print(f"Saved {employee.name} to database")
+
+employee = Employee("John Doe", 5000)
+tax_calculator = TaxCalculator()
+tax = tax_calculator.calculate_tax(employee)
+print(f"Tax: {tax}")
